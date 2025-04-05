@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>個人資料設定</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <div class="container">
+    <h2>個人資料設定</h2>
+    <p>歡迎，<span id="usernameDisplay"></span>！</p>
+
+    <h3>管理信用卡</h3>
+    <div id="cardContainer"></div>
+    <button id="saveCards">儲存信用卡</button>
+
+    <hr>
+
+    <h3>更新個人資料</h3>
+    <input type="text" id="newUsername" placeholder="新的使用者名稱">
+    <input type="email" id="newEmail" placeholder="新的 Email">
+    <input type="password" id="newPassword" placeholder="新的密碼 (可選)">
+    <button id="updateBtn">更新</button>
+    <p id="msg"></p>
+
+    <hr>
+    <button id="goMain">回主功能頁面</button>
+  </div>
+
+  <!-- 修正為絕對路徑 -->
+  <script src="/js/profile.js"></script>
+</body>
+</html>

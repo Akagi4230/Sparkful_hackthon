@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  .container {
+    width: 300px; /* 調整寬度以適應擴充功能視窗 */
+    max-height: 500px; /* 保持最大高度 */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    color: #1d3557;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #457b9d;
+    box-shadow: 0 0 5px rgba(69, 123, 157, 0.3);
+  }
+  
+  input[type="checkbox"] {
+    width: 16px; /* 設置較小的寬度 */
+    height: 16px; /* 保持比例 */
+    margin-right: 8px; /* 與文字保持間距 */
+  }
+  
+  select {
+    height: auto;
+  }
+  
+  button {
+    background-color: #457b9d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  button:hover {
+    background-color: #355f7d;
+    transform: translateY(-1px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  #togglePrivacy {
+    background-color: #f9f9f9;
+    color: #1d3557;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+  }
+  
+  #togglePrivacy:hover {
+    background-color: #e9ecef;
+    transform: translateY(-1px);
+  }
+  
+  label {
+    font-size: 0.85em;
+    color: #1d3557;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 置中顯示 */
+    margin: 6px 0;
+  }
+  
+  .error {
+    color: #e63946;
+    font-size: 0.85em;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  #privacyContent {
+    display: none; /* 預設隱藏 */
+    font-size: 0.85em;
+    color: #1d3557;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #457b9d;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 350px) { /* 修正媒體查詢條件 */
+    .container {
+      width: 350px; /* 在小螢幕上使用百分比寬度 */
+      margin: 10px auto;
+      padding: 12px;
+    }
+  
+    h2 {
+      font-size: 1.2em;
+    }
+  
+    input, select, button {
+      padding: 6px;
+      font-size: 0.8em;
+    }
+  
+    input[type="checkbox"] {
+      width: 14px; /* 在小螢幕上進一步縮小 */
+      height: 14px;
+    }
+  
+    label, .error, #privacyContent {
+      font-size: 0.8em;
+    }
+  }
