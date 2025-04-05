@@ -6,4 +6,7 @@ npm install
 node server.js
 *do all of this in your teminal
 
-Copywrite by 
+ written by 
+ JUI-CHENG ,TAN
+ CHIH-YAO , YU
+ and two others for supported
