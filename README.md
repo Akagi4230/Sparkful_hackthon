@@ -6,7 +6,8 @@ npm install
 node server.js
 *do all of this in your teminal
 
- written by 
- JUI-CHENG ,TAN
- CHIH-YAO , YU
+ written by students from 中原大學Chung Yuan Christian University
+
+ JUI-CHENG ,TAN 譚睿承
+ CHIH-YAO , YU 余至曜
  and two others for supported
