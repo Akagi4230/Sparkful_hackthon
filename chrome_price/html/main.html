@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>主功能頁面</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .container { max-width: 320px; margin: 40px auto; font-family: sans-serif; }
+    button { margin: 6px 0; padding: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>信用卡回饋主功能</h2>
+    <p>歡迎，<span id="usernameDisplay">使用者</span>！</p>
+    <p>此處可進行價格分析、顯示最佳信用卡回饋</p>
+    <button id="checkPrice">分析這個商品價格</button>
+  
+    <!-- 加入動畫容器 -->
+    <div id="loading" class="loader" style="display:none;"></div>
+    
+    <p id="result"></p>
+    <hr>
+    <button id="goProfile">前往個人資料設定</button>
+    <button id="logout">登出</button>
+  </div>
+  
+  <script src="../js/main.js"></script>
+</body>
+</html>
