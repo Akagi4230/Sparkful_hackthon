@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>登入</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/login-register.css">
+</head>
+<body>
+  <div class="container">
+    <h2>登入</h2>
+    <input type="text" id="identifier" placeholder="帳號或 Email">
+    <input type="password" id="password" placeholder="密碼">
+    <label>
+      <input type="checkbox" id="privacyCheck"> 我同意使用 cookie
+    </label>
+    <button id="togglePrivacy">顯示隱私權內容</button>
+    <div id="privacyContent">
+      <p>本擴充功能會使用 cookie 儲存登入資訊與個人設定，且不會提供給第三方。</p>
+    </div>
+    <button id="loginBtn">登入</button>
+    <p id="errorMsg" class="error"></p>
+    <p>尚未註冊？<a href="register.html">點我註冊</a></p>
+  </div>
+  <script src="../js/login.js"></script>
+  <script>
+    const toggleButton = document.getElementById('togglePrivacy');
+    const privacyContent = document.getElementById('privacyContent');
+
+    // 確保元素存在
+    if (toggleButton && privacyContent) {
+      toggleButton.addEventListener('click', () => {
+        // 使用 window.getComputedStyle 獲取實際的 display 樣式
+        const isHidden = window.getComputedStyle(privacyContent).display === 'none';
+        
+        if (isHidden) {
+          privacyContent.style.display = 'block';
+          toggleButton.textContent = '隱藏隱私權內容';
+        } else {
+          privacyContent.style.display = 'none';
+          toggleButton.textContent = '顯示隱私權內容';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

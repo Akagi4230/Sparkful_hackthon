@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>個人資料設定</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <div class="billing-page">
+    <aside class="sidebar">
+      <h3>個人資料</h3>
+      <p>歡迎，<span id="usernameDisplay"></span>！</p>
+      <nav class="sidebar-nav">
+        <a href="donation.html">捐款支持</a>
+        <a href="main.html" id="goMain">返回主頁</a>
+      </nav>
+      <p class="footer-text">© 2025 CFE-Model</p>
+    </aside>
+    <main class="main-content">
+      <div class="container">
+        <nav class="breadcrumb">
+        <span>個人資料設定</span>
+        </nav>
+        <h2>個人資料設定</h2>
+
+        <h3>管理信用卡</h3>
+        <input type="text" id="cardSearch" placeholder="搜尋卡片名稱或銀行...">
+        <div id="bankFilterContainer">
+          <label><input type="checkbox" value="all" checked> 全部</label>
+        </div>
+        <div id="cardContainer"></div>
+        <button id="saveCards">儲存信用卡</button>
+
+        <hr>
+
+        <h3>更新個人資料</h3>
+        <input type="text" id="newUsername" placeholder="新的使用者名稱">
+        <input type="email" id="newEmail" placeholder="新的 Email">
+        <input type="password" id="newPassword" placeholder="新的密碼 (可選)">
+        <button id="updateBtn">更新</button>
+        <p id="msg"></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- 彈出式廣告 -->
+  <div id="adPopup" class="ad-popup">
+    <div class="ad-content">
+      <span id="closeAd" class="close-ad">&times;</span>
+      <a href="donation.html" target="_blank">
+        <img src="https://drive.google.com/thumbnail?id=1WjL8xh0sYqMnxBtuzk7tQrp5wuSldTwi&sz=w800" alt="Donation Ad" class="ad-image">
+      </a>
+    </div>
+  </div>
+
+  <script src="/js/profile.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935317becaa96734',t:'MTc0NTQ3MTQxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935ca26b58f44505',t:'MTc0NTU3MTQ2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

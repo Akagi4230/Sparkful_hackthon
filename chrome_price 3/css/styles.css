@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.container {
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loader {
+  margin: 20px auto;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h2 {
+  color: #1d3557;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  color: #1d3557;
+  font-size: 1em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#usernameDisplay {
+  color: #e63946;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #457b9d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #355f7d;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+#result {
+  color: #1d3557;
+  font-weight: bold;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* === 💳 信用卡推薦區塊樣式 === */
+#credit-recommendation {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+#recommend-list {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #1d3557;
+}
+
+/* === 🤖 金融聊天小幫手區塊樣式 === */
+#ai-chat {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#ai-chat h3 {
+  margin: 0 0 12px;
+  font-size: 1.2em;
+  color: #1d3557;
+}
+
+#chat-history {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-message.user {
+  background-color: #e3f2fd;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chat-message.ai {
+  background-color: #e0e0e0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.95em;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#chat-input:focus {
+  border-color: #457b9d;
+}
+
+#sendBtn {
+  width: auto;
+  padding: 8px 16px;
+  margin: 0;
+  background-color: #457b9d;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* 最佳推薦樣式 */
+.best-recommendation {
+  border: 2px solid #ffd700;
+  background-color: #fffacd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.best-recommendation strong {
+  color: #d32f2f;
+  font-size: 1.1em;
+}
+
+/* 其他建議樣式 */
+.other-suggestions {
+  margin-top: 8px;
+}
+
+.other-suggestions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.other-suggestions li {
+  margin-bottom: 5px;
+  color: #1d3557;
+}
+
+.other-suggestions strong {
+  color: #1d3557;
+}
+
+/* 提醒文字樣式 */
+.reminder {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}

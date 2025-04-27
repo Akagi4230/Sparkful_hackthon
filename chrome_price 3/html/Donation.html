@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>捐款支持我們</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/donation.css">
+</head>
+<body>
+  <div class="billing-page">
+    <aside class="sidebar">
+      <h3>支持我們</h3>
+      <p>您的捐款將幫助我們持續運營並提供更好的服務。</p>
+      <p class="footer-text">© 2025 CFE-Model</p>
+      <p class="footer-text">由 哥布林銀行 提供安全的支付服務</p>
+    </aside>
+    <main class="main-content">
+      <div class="container">
+        <nav class="breadcrumb">
+            <a href="profile.html">上一頁</a> > <span>捐款支持</span>
+        </nav>
+        <h2>捐款支持我們</h2>
+        <label for="cardNumber">信用卡號碼</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+        
+        <label for="cardHolder">持卡人姓名</label>
+        <input type="text" id="cardHolder" placeholder="姓名" required>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiryDate">有效期限 (MM/YY)</label>
+            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+          </div>
+        </div>
+        
+        <label for="donationAmount">捐款金額 (TWD)</label>
+        <input type="number" id="donationAmount" placeholder="輸入金額" min="1" required>
+        
+        <label class="default-payment">
+          <input type="checkbox" id="setDefault">
+          使用預設支付方式捐款
+        </label>
+        
+        <button id="donateBtn">確認捐款</button>
+        <p id="donationMsg"></p>
+        
+        <div class="payment-methods">
+          <img src="/images/visa.jpg" alt="Visa">
+          <img src="/images/MasterCard_Logo.jpg" alt="MasterCard">
+          <img src="/images/JCB_logo.jpg" alt="JCB">
+          <img src="/images/American_Express.jpg" alt="Amex">
+        </div>
+        <p class="terms-links">
+          提供您的支付資訊，即表示您同意我們的
+          <a href="#">服務條款</a> 和 <a href="#">隱私政策</a>。
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('donateBtn').onclick = () => {
+      const cardNumber = document.getElementById('cardNumber').value;
+      const cardHolder = document.getElementById('cardHolder').value;
+      const expiryDate = document.getElementById('expiryDate').value;
+      const cvv = document.getElementById('cvv').value;
+      const donationAmount = document.getElementById('donationAmount').value;
+      const donationMsg = document.getElementById('donationMsg');
+
+      // 簡單驗證
+      if (!cardNumber || !cardHolder || !expiryDate || !cvv || !donationAmount) {
+        donationMsg.textContent = '請填寫所有欄位';
+        return;
+      }
+
+      if (!/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(cardNumber)) {
+        donationMsg.textContent = '請輸入有效的信用卡號碼 (格式: 1234 5678 9012 3456)';
+        return;
+      }
+
+      if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate)) {
+        donationMsg.textContent = '請輸入有效的有效期限 (格式: MM/YY)';
+        return;
+      }
+
+      if (!/^\d{3}$/.test(cvv)) {
+        donationMsg.textContent = '請輸入有效的 CVV (3 位數字)';
+        return;
+      }
+
+      if (donationAmount <= 0) {
+        donationMsg.textContent = '捐款金額必須大於 0';
+        return;
+      }
+
+      // 模擬捐款處理
+      donationMsg.style.color = '#2ecc71';
+      donationMsg.textContent = `感謝您的 ${donationAmount} TWD 捐款！處理中...`;
+
+      // 清空表單
+      document.getElementById('cardNumber').value = '';
+      document.getElementById('cardHolder').value = '';
+      document.getElementById('expiryDate').value = '';
+      document.getElementById('cvv').value = '';
+      document.getElementById('donationAmount').value = '';
+    };
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935c8cfdba647b99',t:'MTc0NTU3MDU4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

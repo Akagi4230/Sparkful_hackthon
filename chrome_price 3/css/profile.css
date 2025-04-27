@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.billing-page {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  min-height: calc(100vh - 40px);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.sidebar p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0;
+  color: #d1d5db;
+}
+
+#usernameDisplay {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+.sidebar-nav a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+
+.sidebar-nav a:hover {
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 0.85em;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+}
+
+.breadcrumb {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.breadcrumb a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #6b7280;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h2 {
+  color: #1d3557;
+  font-size: 2em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #1d3557;
+  font-size: 1.6em;
+  margin: 20px 0 15px;
+}
+
+p {
+  color: #1d3557;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+#cardContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card img {
+  width: 50px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.card label {
+  flex: 1;
+  font-size: 0.95em;
+  color: #1d3557;
+  display: flex;
+  align-items: center;
+}
+
+.card input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #3498db;
+}
+
+.card small {
+  color: #6b7280;
+  font-size: 0.85em;
+  margin-left: 10px;
+}
+
+.card small::before {
+  content: "🏦";
+  margin-right: 5px;
+}
+
+#cardSearch {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#cardSearch:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+#bankFilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+#bankFilterContainer label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: #1d3557;
+}
+
+#bankFilterContainer input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #3498db;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #457b9d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #355f7d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0;
+}
+
+#msg {
+  color: #e63946;
+  text-align: center;
+  font-size: 0.9em;
+  min-height: 20px;
+}
+
+/* 彈出式廣告容器 */
+.ad-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding-top: 13%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 廣告內容 */
+.ad-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* 縮小最大寬度以與整體設計一致 */
+  width: 90%; /* 確保在小屏幕上自適應 */
+  max-height: 300px; /* 縮小最大高度 */
+  animation: slideUp 0.5s ease-out forwards; /* 與按鈕動畫保持一致 */
+  display: flex;
+  margin: 0 auto; /* 居中對齊 */
+  justify-content: center;
+  align-items: center;
+  position: relative; /* 確保子元素定位正確 */
+}
+
+/* 廣告圖片 */
+.ad-content img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* 移除圖片底部的空白 */
+}
+
+/* 關閉按鈕 */
+.close-ad {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: #1d3557;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.close-ad:hover {
+  background-color: #e63946;
+}
+
+/* 滑入動畫 */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 850px) {
+  .billing-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  .card img {
+    width: 50px;
+    height: 32px;
+  }
+
+  .ad-content {
+    max-width: 350px;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card img {
+    width: 40px;
+    height: 24px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .ad-content {
+    max-width: 300px;
+    max-height: 200px;
+  }
+}

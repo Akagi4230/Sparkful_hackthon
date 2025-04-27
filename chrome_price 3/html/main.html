@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>主功能頁面</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>信用卡回饋主功能</h2>
+    <p>歡迎，<span id="usernameDisplay">使用者</span>！</p>
+    <p>此處可進行價格分析、顯示最佳信用卡回饋</p>
+    <button id="checkPrice">分析這個商品價格</button>
+
+    <!-- 加入動畫容器 -->
+    <div id="loading" class="loader" style="display:none;"></div>
+    <p id="result"></p>
+
+    <!-- 🤖 金融聊天小幫手區塊 -->
+    <div id="ai-chat">
+      <h3>🤖 金融聊天小幫手</h3>
+      <div id="chat-history"></div>
+      <div class="chat-input-container">
+        <input id="chat-input" type="text" placeholder="我每月都買書，該用哪張卡？">
+        <button id="sendBtn" onclick="sendChat()">送出</button>
+      </div>
+    </div>
+
+    <hr>
+    <button id="goProfile">前往個人資料設定</button>
+    <button id="logout">登出</button>
+  </div>
+
+  <script src="../js/main.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935c318c8d347bb1',t:'MTc0NTU2NjgzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

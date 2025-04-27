@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>信用卡後台管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/backend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="billing-page">
+    <!-- 側邊欄 -->
+    <aside class="sidebar">
+      <h3>後台管理</h3>
+      <nav class="sidebar-nav">
+        <a href="backend.html" class="active">卡片管理</a>
+        <a href="profile.html">個人資料</a>
+        <a href="donation.html">捐款支持</a>
+        <a href="main.html" id="goMain">返回主頁</a>
+      </nav>
+      <p class="footer-text">© 2025 CFE-Model</p>
+    </aside>
+
+    <!-- 主內容區 -->
+    <main class="main-content">
+      <div class="container">
+        <!-- 新增信用卡資訊 表單 -->
+        <div class="card shadow-sm mb-5">
+          <div class="card-header bg-primary text-white">
+            <h1 class="h4 mb-0">➕ 新增信用卡資訊</h1>
+          </div>
+          <div class="card-body bg-light">
+            <form id="cardForm" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">卡片名稱</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">圖片 URL</label>
+                <input type="text" class="form-control" name="imageUrl" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">回饋資訊 (JSON 格式，範例：{"domestic": "1%", "international": "2%"})</label>
+                <textarea class="form-control" name="rewards" rows="3" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">行動支付平台 (以換行分隔，範例：LINE Pay\n街口支付)</label>
+                <textarea class="form-control" name="paymentPlatforms" rows="2"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">優惠店商平台 (以換行分隔，範例：momo購物網\nPChome)</label>
+                <textarea class="form-control" name="storePlatforms" rows="2"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">產品特色 (以換行分隔，範例：國內消費回饋\n國外消費回饋)</label>
+                <textarea class="form-control" name="features" rows="2" required></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">年費</label>
+                <input type="text" class="form-control" name="annualFee" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">其他優勢 (以換行分隔，範例：旅遊優惠\n餐飲折扣)</label>
+                <textarea class="form-control" name="additionalBenefits" rows="2"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">最佳用途</label>
+                <input type="text" class="form-control" name="bestUse" required>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">➕ 新增信用卡</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- 信用卡列表 -->
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h2 class="h5 mb-0">📋 所有信用卡清單</h2>
+          </div>
+          <div class="card-body">
+            <div id="cardList" class="row row-cols-1 row-cols-md-2 g-4"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/js/backend.js"></script>
+</body>
+</html>
